@@ -13,6 +13,7 @@ function fetchMeData(){
         .then(json => {
             const quoteBody = document.querySelector('.quote');
             const quote = document.createElement('p');
+            quote.setAttribute('class', "quote");
             quote.innerHTML = `${json.content}`
             quoteBody.appendChild(quote);
             openSite();
@@ -25,10 +26,14 @@ function openSite(){
     let obj = {0: 'https://www.youtube.com/watch?v=inpok4MKVLM',
     1: 'https://www.youtube.com/watch?v=8w8vuM98kk8',
     2: 'https://www.youtube.com/watch?v=dF965ll2J0c',
-    3: 'https://www.youtube.com/watch?v=fq7xaLY7_Zs'
+    3: 'https://www.youtube.com/watch?v=fq7xaLY7_Zs',
+    4: 'https://www.youtube.com/watch?v=yKItGCpL73M',
+    5: `https://www.youtube.com/watch?v=2L2lnxIcNmo`
     }
     const link = document.querySelector('a');
-    link.setAttribute('href', `${obj[Math.floor(Math.random()*4)]}`);
+    const button = document.getElementById('button')
+    link.setAttribute('href', `${obj[Math.floor(Math.random()*6)]}`);
+    
 }
 
 fetchMeData();

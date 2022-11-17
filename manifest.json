@@ -1,0 +1,11 @@
+{
+    "name": "Stretch Helper",
+    "version": "1.0.0",
+    "description":"When you don't know what stretch to do",
+    "manifest_version": 3,
+    "author":"Max & Jason",
+    "action": {
+        "default_popup": "index.html",
+        "default_title":"Stretch Helper"
+    }
+}
